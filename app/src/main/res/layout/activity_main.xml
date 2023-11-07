@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    tools:context=".ui.activity.HomeMainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_header_gradient"
+        android:padding="@dimen/_15sdp">
+
+        <ImageView
+            android:id="@+id/ivSideMenu"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/baseline_menu_24"
+            app:tint="@color/light_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/ivSideMenu"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="@string/my_store"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:id="@+id/ivFavorite"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_toLeftOf="@+id/rlCart"
+            android:src="@drawable/baseline_favorite_border_24"
+            app:tint="@color/light_black" />
+
+        <RelativeLayout
+            android:id="@+id/rlCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginBottom="-10dp"
+                android:background="@drawable/circle_bg"
+                android:paddingStart="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_2sdp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8sdp" />
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_below="@+id/tvCount"
+                android:src="@drawable/baseline_shopping_cart_24"
+                app:tint="@color/light_black" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlHeader"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/shopping_category_item" />
+
+</RelativeLayout>

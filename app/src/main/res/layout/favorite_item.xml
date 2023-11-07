@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_4sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginEnd="@dimen/_4sdp"
+    android:layout_marginBottom="@dimen/_8sdp"
+    app:cardBackgroundColor="@color/white"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardMaxElevation="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_6sdp">
+
+        <ImageView
+            android:id="@+id/ivCoverImage"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/cover_placeholder" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/ivCoverImage">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/ivFavorite"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:maxLines="1"
+                android:text="@string/my_store"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <ImageView
+                android:id="@+id/ivFavorite"
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_21sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/baseline_favorite_24"
+                app:tint="@color/red" />
+
+
+
+            <TextView
+                android:id="@+id/tvUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/my_store"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8sdp" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="122"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/tvUnit"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/tvAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/rect_bg"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:layout_below="@+id/ivFavorite"
+                android:paddingStart="@dimen/_7sdp"
+                android:paddingEnd="@dimen/_7sdp"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp" />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RoomDbDaggerHilt</string>
+
+    <string name="my_store">My Store</string>
+    <string name="checkout">Checkout</string>
+
+</resources>
